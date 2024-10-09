@@ -226,13 +226,12 @@
       }
       .bg-img {
         position: fixed;
-        width: 6.5rem;
+        width: 13vw;
         left: 0;
         top: 0;
         height: 100vh;
         pointer-events: none;
         background-image: url("images/wavy-background.jpg");
-
         background-size: cover;
       }
       .site-border {
@@ -244,30 +243,50 @@
         margin: 3.5rem;
         pointer-events: none;
       }
-      @media (orientation: portrait) {
-        .trees-img {
-          width: 100vw;
-          right: -25vw;
-          top: 60vh;
-          transform: translateY(-50%);
-          opacity: 0.5;
+      @media (max-width: 1600px) and (min-width: 1200px) {
+        body {
+          max-width: 1000px;
+        }
+      }
+      @media (max-width: 1200px) and (min-width: 1000px) {
+        body {
+          max-width: 800px;
+        }
+      }
+      @media (max-width: 1000px) and (min-width: 800px) {
+        body {
+          max-width: 700px;
+        }
+      }
+      @media (max-width: 800px) and (min-width: 600px) {
+        .bg-img {
+          display: none;
         }
         main {
+          padding-inline: 8rem;
           padding-bottom: 25vh;
+        }
+        header {
+          padding-inline: 1rem;
+          margin-left: 6rem;
+          width: 380px;
         }
       }
       @media (max-width: 600px) {
         header {
           gap: 16px;
-          padding: 16px;
+          padding: 0.5rem;
+          margin: 1.5rem;
+          background: transparent;
         }
         main {
-          padding: 16px;
+          padding: 2rem;
           padding-bottom: 100px;
         }
         main h1 {
-          font-size: 32px;
+          font-size: 40px;
           margin-bottom: 16px;
+          margin-left: 0;
         }
         main h2 {
           color: var(--text-2);
@@ -277,7 +296,7 @@
           letter-spacing: 0.125em;
         }
         main p {
-          font-size: 12px;
+          font-size: 14px;
           max-width: 640px;
           color: var(--text-3);
         }
@@ -287,12 +306,15 @@
           margin-top: 24px;
           align-items: start;
         }
-        .trees-img {
-          width: 75vw;
-          right: -10vw;
-          top: 80vh;
-          transform: translateY(-50%);
-          opacity: 0.5;
+        .site-border {
+          margin: 0.5rem;
+          width: calc(100vw - 1rem);
+          height: calc(100vh - 1rem);
+          border-width: 2px;
+          opacity: 0.75;
+        }
+        .bg-img {
+          display: none;
         }
       }
     </style>
