@@ -1,0 +1,314 @@
+<!-- <!DOCTYPE html> -->
+<html>
+  <head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/flipbook.style.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+
+    <!-- Bootstrap Css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FS3QXVPFKM"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-FS3QXVPFKM");
+    </script>
+
+    <!-- Include JS -->
+    <script src="js/flipbook.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        ["graphic-design-portfolio", "landscape-design-portfolio"].forEach(
+          (str) => {
+            $(`#${str}`).flipBook({
+              // Layout Setting
+              pdfUrl: `pdf/${str}.pdf`,
+              lightBox: true,
+              layout: 3,
+              currentPage: { vAlign: "bottom", hAlign: "left" },
+              // BTN SETTING
+              btnShare: { enabled: false },
+              btnPrint: { enabled: false },
+              btnToc: { enabled: false },
+              btnBookmark: { enabled: false },
+              btnSound: { enabled: false },
+              btnDownloadPages: { enabled: false },
+              btnColor: "var(--brand)",
+              sideBtnColor: "var(--brand)",
+              sideBtnSize: 60,
+              sideBtnBackground: "rgba(0,0,0,.7)",
+              sideBtnRadius: 60,
+              btnSound: { enabled: false, vAlign: "top", hAlign: "left" },
+              btnAutoplay: { vAlign: "top", hAlign: "left" },
+              // SHARING
+              btnShare: {
+                enabled: true,
+                title: "Share",
+                icon: "fa-share-alt",
+              },
+              facebook: { enabled: false },
+              google_plus: { enabled: false },
+              email: { enabled: false },
+              twitter: { enabled: false },
+              pinterest: { enabled: false },
+            });
+          }
+        );
+      });
+    </script>
+
+    <style type="text/css">
+      html {
+        --brand: #ff783c;
+        --text-1: #333;
+        --text-2: #656565;
+        --text-3: #777777;
+        font-size: 16px;
+      }
+      body {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+      }
+      header {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        padding: 48px;
+        padding-bottom: 0;
+        background-color: #fff;
+      }
+      header a {
+        color: var(--text-1);
+        font-weight: 400;
+        text-decoration: none;
+        transition: 0.2s;
+        letter-spacing: 0.1em;
+      }
+      header a:hover {
+        color: var(--brand);
+        font-weight: 400;
+        text-decoration: none;
+      }
+      .header-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--brand);
+      }
+      main {
+        flex: 1;
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 120px;
+      }
+      main h1 {
+        color: var(--brand);
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+      }
+      main h2 {
+        color: var(--text-2);
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 48px;
+        letter-spacing: 0.125em;
+      }
+      main p {
+        max-width: 640px;
+        color: var(--text-3);
+      }
+      .portfolio-button {
+        background-color: #fff;
+        border: 1px solid var(--brand);
+        color: var(--brand);
+        padding: 16px 24px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 400;
+        /* text-transform: uppercase; */
+        letter-spacing: 0.1em;
+        transition: 0.2s;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .portfolio-button:hover {
+        background: var(--brand);
+        color: #fff;
+      }
+      .portfolios {
+        display: flex;
+        gap: 16px;
+        margin-top: 24px;
+      }
+      .trees-img {
+        position: absolute;
+        width: 50vw;
+        right: -10vw;
+        top: 50vh;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+      @media (orientation: portrait) {
+        .trees-img {
+          width: 100vw;
+          right: -25vw;
+          top: 60vh;
+          transform: translateY(-50%);
+          opacity: 0.5;
+        }
+        main {
+          padding-bottom: 25vh;
+        }
+      }
+      @media (max-width: 600px) {
+        header {
+          gap: 16px;
+          padding: 16px;
+        }
+        main {
+          padding: 16px;
+          padding-bottom: 100px;
+        }
+        main h1 {
+          font-size: 32px;
+          margin-bottom: 16px;
+        }
+        main h2 {
+          color: var(--text-2);
+          font-size: 16px;
+          font-weight: 400;
+          margin-bottom: 24px;
+          letter-spacing: 0.125em;
+        }
+        main p {
+          font-size: 12px;
+          max-width: 640px;
+          color: var(--text-3);
+        }
+        .portfolios {
+          gap: 16px;
+          flex-direction: column;
+          margin-top: 24px;
+          align-items: start;
+        }
+        .trees-img {
+          width: 75vw;
+          right: -10vw;
+          top: 80vh;
+          transform: translateY(-50%);
+          opacity: 0.5;
+        }
+      }
+    </style>
+
+    <title>Emily Andresen Personal Website</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-circle"></div>
+      <a href="./pdf/EmilyAndresen_resume.pdf" target="_blank">Resume</a>
+      <a href="https://www.linkedin.com/in/emilylandresen/" target="_blank"
+        >LinkedIn</a
+      >
+      <a href="mailto: emilyand.ders@gmail.com">Email</a>
+    </header>
+
+    <img src="images/trees.svg" alt="abstract trees" class="trees-img" />
+
+    <main>
+      <h1>Emily Andresen</h1>
+      <h2>Landscape Designer and Graphic Designer</h2>
+      <p>
+        I am a designer with an interdisciplinary background.
+        Integrating client feedback and maintaining design consistency are my top priorities.
+        I’m committed to continue learning and driven to exceed client
+        expectations.
+      </p>
+      <div class="portfolios">
+        <a id="landscape-design-portfolio" class="portfolio-button"
+          >Landscape architecture portfolio</a
+        >
+        <a id="graphic-design-portfolio" class="portfolio-button"
+          >Graphic design portfolio</a
+        >
+      </div>
+    </main>
+
+    <!-- Bootstrap Js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
