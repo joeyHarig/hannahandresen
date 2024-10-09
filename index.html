@@ -72,48 +72,46 @@
 
     <script type="text/javascript">
       $(document).ready(function () {
-        ["graphic-design-portfolio", "landscape-design-portfolio"].forEach(
-          (str) => {
-            $(`#${str}`).flipBook({
-              // Layout Setting
-              pdfUrl: `pdf/${str}.pdf`,
-              lightBox: true,
-              layout: 3,
-              currentPage: { vAlign: "bottom", hAlign: "left" },
-              // BTN SETTING
-              btnShare: { enabled: false },
-              btnPrint: { enabled: false },
-              btnToc: { enabled: false },
-              btnBookmark: { enabled: false },
-              btnSound: { enabled: false },
-              btnDownloadPages: { enabled: false },
-              btnColor: "var(--brand)",
-              sideBtnColor: "var(--brand)",
-              sideBtnSize: 60,
-              sideBtnBackground: "rgba(0,0,0,.7)",
-              sideBtnRadius: 60,
-              btnSound: { enabled: false, vAlign: "top", hAlign: "left" },
-              btnAutoplay: { vAlign: "top", hAlign: "left" },
-              // SHARING
-              btnShare: {
-                enabled: true,
-                title: "Share",
-                icon: "fa-share-alt",
-              },
-              facebook: { enabled: false },
-              google_plus: { enabled: false },
-              email: { enabled: false },
-              twitter: { enabled: false },
-              pinterest: { enabled: false },
-            });
-          }
-        );
+        ["graphic-design-portfolio"].forEach((str) => {
+          $(`#${str}`).flipBook({
+            // Layout Setting
+            pdfUrl: `pdf/${str}.pdf`,
+            lightBox: true,
+            layout: 3,
+            currentPage: { vAlign: "bottom", hAlign: "left" },
+            // BTN SETTING
+            btnShare: { enabled: false },
+            btnPrint: { enabled: false },
+            btnToc: { enabled: false },
+            btnBookmark: { enabled: false },
+            btnSound: { enabled: false },
+            btnDownloadPages: { enabled: false },
+            btnColor: "var(--brand)",
+            sideBtnColor: "var(--brand)",
+            sideBtnSize: 60,
+            sideBtnBackground: "rgba(0,0,0,.7)",
+            sideBtnRadius: 60,
+            btnSound: { enabled: false, vAlign: "top", hAlign: "left" },
+            btnAutoplay: { vAlign: "top", hAlign: "left" },
+            // SHARING
+            btnShare: {
+              enabled: true,
+              title: "Share",
+              icon: "fa-share-alt",
+            },
+            facebook: { enabled: false },
+            google_plus: { enabled: false },
+            email: { enabled: false },
+            twitter: { enabled: false },
+            pinterest: { enabled: false },
+          });
+        });
       });
     </script>
 
     <style type="text/css">
       html {
-        --brand: #ff783c;
+        --brand: #3c90ff;
         --text-1: #333;
         --text-2: #656565;
         --text-3: #777777;
@@ -168,7 +166,7 @@
         font-weight: 700;
         margin-bottom: 16px;
         text-transform: uppercase;
-        letter-spacing: 0.25em;
+        letter-spacing: 0.125em;
       }
       main h2 {
         color: var(--text-2);
@@ -265,7 +263,7 @@
       }
     </style>
 
-    <title>Emily Andresen Personal Website</title>
+    <title>Hannah Andresen Portfolio</title>
   </head>
   <body>
     <header>
@@ -280,18 +278,14 @@
     <img src="images/trees.svg" alt="abstract trees" class="trees-img" />
 
     <main>
-      <h1>Emily Andresen</h1>
-      <h2>Landscape Designer and Graphic Designer</h2>
+      <h1>Hannah Andresen</h1>
+      <h2>Graphic Designer</h2>
       <p>
-        I am a designer with an interdisciplinary background.
-        Integrating client feedback and maintaining design consistency are my top priorities.
-        I’m committed to continue learning and driven to exceed client
-        expectations.
+        I am a designer with an interdisciplinary background. Integrating client
+        feedback and maintaining design consistency are my top priorities. I’m
+        committed to continue learning and driven to exceed client expectations.
       </p>
       <div class="portfolios">
-        <a id="landscape-design-portfolio" class="portfolio-button"
-          >Landscape architecture portfolio</a
-        >
         <a id="graphic-design-portfolio" class="portfolio-button"
           >Graphic design portfolio</a
         >
